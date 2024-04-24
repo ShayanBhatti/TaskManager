@@ -6,6 +6,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
 body{
    background-image: radial-gradient(circle, #303030, #1b1b1b, #0d0d0d, #000000, #000000);
 color: #ffffff;
@@ -17,6 +18,7 @@ border: solid 2px #ffffff;
     background-position: center;
     background-attachment: fixed; 
 }
+
 
 #main{
     position: relative;
