@@ -1,29 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-
-body{
-   background-image: radial-gradient(circle, #303030, #1b1b1b, #0d0d0d, #000000, #000000);
-color: #ffffff;
-border: solid 2px #ffffff;
-
+body {
+    background-image: radial-gradient(circle, #303030, #1b1b1b, #0d0d0d, #000000, #000000);
+    color: #ffffff;
+    border: solid 2px #ffffff;
     overflow-x: hidden;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; 
+    background-attachment: fixed;
 }
 
-
-#main{
+#main {
     position: relative;
     top: 50px;
-    width: 600px;
+    width: 90%;
+    max-width: 600px;
     height: auto;
     padding-bottom: 10px;
     margin: 0 auto;
@@ -31,63 +30,58 @@ border: solid 2px #ffffff;
     border-radius: 30px;
     border: solid 2px white;
     transition: 2s;
-    transform: scale(0.7);
-
+    transform: scale(0.9);
 }
 
-#main:hover{
-
-    transform: scale(0.9);
+#main:hover {
+    transform: scale(1);
     box-shadow: rgb(5, 0, 0) 0px 7px 30px 1px;
 }
 
-#todos{
+#todos {
     position: relative;
     color: white;
     padding: 20px;
-    width: 600px;
+    width: 100%;
     margin: 0 auto;
     height: auto;
 }
 
-#todos > .heading{
+#todos > .heading {
     margin-bottom: 30px;
     text-align: center;
 }
 
-#todos > .heading > h1{
+#todos > .heading > h1 {
     display: inline-block;
     position: relative;
     font-size: 2.5rem;
 }
 
-#todos > .todo-input-container{
+#todos > .todo-input-container {
     width: 100%;
     text-align: center;
     position: relative;
     margin-bottom: 50px;
 }
 
-#todos > .todo-input-container > .todo_input{
+#todos > .todo-input-container > .todo_input {
     width: 85%;
     height: 40px;
-    padding: 0 0 0 10px;
+    padding: 0 10px;
     font-size: 1.2rem;
     color: white;
     outline: none;
     border-radius: 30px;
     border: solid 2px white;
     background-color: transparent;
-    
 }
 
-::-webkit-input-placeholder{
-
+::placeholder {
     color: white;
 }
 
-#todos > .todo-input-container > .add-item{
-    
+#todos > .todo-input-container > .add-item {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -97,19 +91,19 @@ border: solid 2px #ffffff;
     cursor: pointer;
 }
 
-#todos > .todo-input-container > .add-item:nth-child(2){
+#todos > .todo-input-container > .add-item:nth-child(2) {
     right: 44px;
     color: black;
     border-radius: 30px;
     background-color: white;
 }
 
-#todos > .todo-list-container{
+#todos > .todo-list-container {
     list-style: none;
     margin: 10px 0 0;
 }
 
-#todos > .todo-list-container .todo-list{
+#todos > .todo-list-container .todo-list {
     position: relative;
     display: flex;
     align-items: center;
@@ -117,7 +111,7 @@ border: solid 2px #ffffff;
     overflow: hidden;
 }
 
-#todos > .todo-list-container .todo-list .todo-item{
+#todos > .todo-list-container .todo-list .todo-item {
     width: 100%;
     background-color: transparent;
     color: white;
@@ -129,67 +123,104 @@ border: solid 2px #ffffff;
     border: solid 2px white;
 }
 
-#todos > .todo-list-container .todo-list .button{
+#todos > .todo-list-container .todo-list .button {
     position: absolute;
     right: 0;
 }
 
-#todos > .todo-list-container .todo-list .button button{
+#todos > .todo-list-container .todo-list .button button {
     width: 40px;
-    height: 50px;
+    height: 40px;
     border: none;
     color: white;
     outline: none;
     cursor: pointer;
 }
 
-.btn-check{
-
+.btn-check {
     position: relative;
-    top: 10.3px;
+    top: 10px;
     border: none;
     width: 40px;
-    height: 39.5px;
-    padding: 0px;
-    margin: 0px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
     cursor: pointer;
 }
 
-
-#todos > .todo-list-container .todo-list .button .trash{
+#todos > .todo-list-container .todo-list .button .trash {
     background-color: white;
     color: black;
     position: relative;
     bottom: 5px;
 }
 
-#todos > .todo-list-container .todo-list .button button i{
+#todos > .todo-list-container .todo-list .button button i {
     pointer-events: none;
 }
-.fall{
 
+.fall {
     transform: translateY(10px);
     transition: .01s;
 }
 
-.editBtn{
-    background-color:black;
+.editBtn {
+    background-color: black;
     position: relative;
     bottom: 5px;
-
 }
 
-@media screen and (max-width: 600px){
-    #todos{
-        width: 100%;
+@media screen and (max-width: 768px) {
+    #main {
+        width: 95%;
+    }
+
+    #todos > .heading > h1 {
+        font-size: 2rem;
+    }
+
+    #todos > .todo-input-container > .todo_input {
+        width: 80%;
     }
 }
-.heading{
+
+@media screen and (max-width: 480px) {
+    #main {
+        width: 100%;
+        top: 20px;
+    }
+
+    #todos > .heading > h1 {
+        font-size: 1.8rem;
+    }
+
+    #todos > .todo-input-container > .todo_input {
+        width: 75%;
+        font-size: 1rem;
+    }
+
+    #todos > .todo-input-container > .add-item {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+
+    #todos > .todo-list-container .todo-list .todo-item {
+        font-size: 0.9rem;
+        padding: 0 8px;
+    }
+
+    .btn-check {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.heading {
     padding-left: 2%;
 }
-.nothing
-{
-font-size: 150px;
-justify-content: flex-end;
 
+.nothing {
+    font-size: 150px;
+    justify-content: flex-end;
 }
